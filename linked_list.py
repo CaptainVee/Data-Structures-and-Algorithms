@@ -12,4 +12,16 @@ class Node:
     
     def __repr__(self):
         
+        return '<Node data: {}'.format(self.data)
     
+    
+class LinkedList:
+    """
+      Singly linked list
+    """
+    
+    def __init__(self):
+        self.head = None
+        
+    def is_empty(self):
+        return self.head == None
