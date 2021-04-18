@@ -29,3 +29,37 @@ def split(lists):
     right = lists[midpoint:]
     
     return left, right
+
+
+def merge(left, right):
+    """
+    Merge two list (arrays), sorting them in the process
+    Returns a new merged list
+    """
+    
+    lists = []
+    i = 0
+    j = 0
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
+
+
