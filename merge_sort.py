@@ -37,10 +37,45 @@ def merge(left, right):
     Returns a new merged list
     """
     
-    lists = []
+    l = []
     i = 0
     j = 0
     
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            l.append(left[i])
+            i += 1
+            
+        else:
+            l.append(right[j])
+            j += 1
+            
+    
+    while i < len(left):
+        l.append(left[i])
+        i += 1
+        
+    while j < len(right):
+        l.append(right[j])
+        j += 1
+    
+    return l
+
+
+def verify_sorted(lists):
+    n = len(lists)
+    
+    if n == 0 or n == 1:
+        return True 
+    
+    return lists[0] < lists[1] and verify_sorted(lists[:0])
+
+        
+alist = [9,8,7,6,5,0,3,2,4]
+
+l = (merge_sort(alist))
+print(verify_sorted(alist))
+print(verify_sorted(l))
     
     
     
