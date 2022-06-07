@@ -85,3 +85,18 @@ def countVowelPermutation(n):
     return len(big_list), c
         
 countVowelPermutation(5) 
+
+
+def countVowelPermutation(n: int):
+    dp = [1, 1, 1, 1, 1]
+    MOD = 10 ** 9 + 7
+    for i in range(n-1):
+        dp = [(dp[1] + dp[2] + dp[4])% MOD,
+              (dp[0] + dp[2])% MOD,
+              (dp[1] + dp[3])% MOD, 
+              dp[2] % MOD, 
+              (dp[2] + dp[3])% MOD]
+        
+    return sum(dp) % MOD
+
+countVowelPermutation(1000)
